@@ -1,37 +1,52 @@
-# 微信小程序示例
-微信小程序示例源码，欢迎扫描以下小程序码体验。
+![aiob](miniprogram/image/aiob.png)
 
-> 提示：请使用微信开发者工具或微信客户端 6.7.2 及以上版本运行。
+# WeChat Mini Program Example
+
+This repository contains the source code for a WeChat Mini Program example. You can experience it by scanning the Mini Program QR code below.
+
+> **Note:** Please use WeChat Developer Tools or WeChat client version 6.7.2 or higher to run this project.
 
 <img width="200" src="https://res.wx.qq.com/op_res/QqOF7ydl0dkpq-orpebXL-gBspr08VjoFOFGrWvKF9IULLhfT9XhnsSKlvc0gI8d">
 
-## 使用
+## Getting Started
 
-```
-cd demo
-npm i
-cd miniprogram
-npm i
-```
-完成上述步骤后，使用微信开发者工具，点击【工具-构建npm】
+To set up and run the project:
 
-使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)打开该示例代码，云开发环境搭建请参考[云开发示例说明](https://github.com/wechat-miniprogram/miniprogram-demo/blob/master/miniprogram/page/cloud/README.md)。
+1.  Navigate to the `demo` directory:
+    ```bash
+    cd demo
+    ```
+2.  Install dependencies for the `demo` directory:
+    ```bash
+    npm install
+    ```
+3.  Navigate to the `miniprogram` directory:
+    ```bash
+    cd miniprogram
+    ```
+4.  Install dependencies for the `miniprogram` directory:
+    ```bash
+    npm install
+    ```
+5.  After completing the above steps, open the project with WeChat Developer Tools and click on `Tools -> Build npm`.
 
+For detailed instructions on setting up the cloud development environment, please refer to the [Cloud Development Example Documentation](https://github.com/wechat-miniprogram/miniprogram-demo/blob/master/miniprogram/page/cloud/README.md).
 
-## 贡献
+## Contribution
 
-如果你有 bug 反馈或其他任何建议，欢迎提 issue 给我们。
+We welcome contributions to this project! If you encounter any bugs or have suggestions for improvement, please feel free to [open an issue](https://github.com/Tully-L/0819-aiob/issues).
 
-如果你愿意一起来完善小程序示例，欢迎通过 PR 的方式贡献代码。为了保证代码风格的统一，在编写代码之前，请在项目根目录运行以下命令安装依赖：
+If you wish to contribute code, please submit a Pull Request (PR). To maintain consistent code style, ensure you run the following command in the project root directory before writing code:
 
-```
+```bash
 npm install
 ```
-同时，确保你的代码可以通过 Lint 检查：
-```
+
+Additionally, please ensure your code passes the Lint checks:
+```bash
 npm run lint
 ```
 
-## 截图
+## Screenshots
 
 <img width="375" src="https://res.wx.qq.com/op_res/0_vsSii5DaG-1hoXcqmBCT_tPShgSPKi3_FBVuVj1tu1ZdZD8lwYNrSQm3mdswI2">
