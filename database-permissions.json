@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "drivers": {
+      "read": "auth.openid == resource.data._openid || auth.custom.role == 'admin'",
+      "write": "auth.custom.role == 'admin'",
+      "create": "auth.custom.role == 'admin' || (auth.openid == resource.data._openid && !resource.data.role)",
+      "delete": "auth.custom.role == 'admin'"
+    },
+    "checkins": {
+      "read": "auth.openid == resource.data._openid || auth.custom.role == 'admin'",
+      "write": "auth.openid == resource.data._openid || auth.custom.role == 'admin'",
+      "create": "auth.openid == resource.data._openid",
+      "delete": "auth.custom.role == 'admin'"
+    },
+    "call_records": {
+      "read": "auth.custom.role == 'admin'",
+      "write": "auth.custom.role == 'admin'",
+      "create": "auth.custom.role == 'admin'",
+      "delete": "auth.custom.role == 'admin'"
+    },
+    "system_config": {
+      "read": "auth.custom.role == 'admin'",
+      "write": "auth.custom.role == 'admin'",
+      "create": "auth.custom.role == 'admin'",
+      "delete": "auth.custom.role == 'admin'"
+    },
+    "call_templates": {
+      "read": "auth.custom.role == 'admin'",
+      "write": "auth.custom.role == 'admin'",
+      "create": "auth.custom.role == 'admin'",
+      "delete": "auth.custom.role == 'admin'"
+    }
+  },
+  "description": {
+    "drivers": "司机信息表 - 司机只能读写自己的信息，管理员可以操作所有数据",
+    "checkins": "打卡记录表 - 司机只能读写自己的打卡记录，管理员可以查看所有记录",
+    "call_records": "外呼记录表 - 仅管理员可以访问",
+    "system_config": "系统配置表 - 仅管理员可以访问",
+    "call_templates": "外呼模板表 - 仅管理员可以访问"
+  }
+}

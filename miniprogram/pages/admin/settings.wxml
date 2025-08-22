@@ -1,0 +1,26 @@
+<!--pages/admin/settings.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="section-title">打卡时间设置</view>
+    <view class="form-item">
+      <text class="label">开始时间</text>
+      <picker mode="time" value="{{checkinConfig.startTime}}" bindchange="onStartTimeChange">
+        <view class="picker">{{checkinConfig.startTime}}</view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">结束时间</text>
+      <picker mode="time" value="{{checkinConfig.endTime}}" bindchange="onEndTimeChange">
+        <view class="picker">{{checkinConfig.endTime}}</view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">迟到阈值(分钟)</text>
+      <input class="input" type="number" value="{{checkinConfig.lateThreshold}}" bindinput="onLateThresholdChange" />
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="save-btn" bindtap="saveConfig">保存设置</button>
+  </view>
+</view>

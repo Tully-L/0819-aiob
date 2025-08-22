@@ -1,0 +1,62 @@
+/* pages/admin/calls.wxss */
+.container {
+  padding: 40rpx;
+}
+
+.call-record {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.call-info {
+  flex: 1;
+}
+
+.driver-name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.phone,
+.call-time {
+  display: block;
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 4rpx;
+}
+
+.call-result {
+  text-align: right;
+}
+
+.status {
+  display: block;
+  padding: 6rpx 12rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  margin-bottom: 8rpx;
+}
+
+.status-completed {
+  background: #d1f2eb;
+  color: #00b894;
+}
+
+.status-failed {
+  background: #fab1a0;
+  color: #e17055;
+}
+
+.duration {
+  font-size: 24rpx;
+  color: #666;
+}

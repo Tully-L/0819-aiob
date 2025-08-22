@@ -1,0 +1,41 @@
+<!--pages/auth/login.wxml-->
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/image/logo.png" mode="aspectFit"></image>
+    <text class="title">车队管理系统</text>
+    <text class="subtitle">司机打卡 · 智能外呼</text>
+  </view>
+
+  <view class="login-section">
+    <view wx:if="{{!hasUserInfo && canIUseGetUserProfile}}">
+      <button class="login-btn" bindtap="getUserProfile">
+        微信登录
+      </button>
+    </view>
+    <view wx:elif="{{!hasUserInfo}}">
+      <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        微信登录
+      </button>
+    </view>
+    <view wx:else class="user-info">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="nickname">{{userInfo.nickName}}</text>
+      <text class="welcome">欢迎使用车队管理系统</text>
+    </view>
+  </view>
+
+  <view class="features">
+    <view class="feature-item">
+      <text class="feature-icon">📍</text>
+      <text class="feature-text">GPS定位打卡</text>
+    </view>
+    <view class="feature-item">
+      <text class="feature-icon">📞</text>
+      <text class="feature-text">智能语音提醒</text>
+    </view>
+    <view class="feature-item">
+      <text class="feature-icon">📊</text>
+      <text class="feature-text">数据统计分析</text>
+    </view>
+  </view>
+</view>

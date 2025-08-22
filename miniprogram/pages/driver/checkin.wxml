@@ -1,0 +1,67 @@
+<!--pages/driver/checkin.wxml-->
+<view class="container">
+  <!-- 头部信息 -->
+  <view class="header">
+    <view class="time-info">
+      <text class="current-time">{{currentTime}}</text>
+      <text class="current-date">{{currentDate}}</text>
+    </view>
+    <view class="user-actions">
+      <button class="action-btn" bindtap="goToProfile">
+        <text class="icon">👤</text>
+      </button>
+      <button class="action-btn" bindtap="goToHistory">
+        <text class="icon">📋</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 打卡状态 -->
+  <view class="status-card">
+    <view wx:if="{{todayStatus && todayStatus.hasCheckedIn}}" class="status-success">
+      <text class="status-icon">✅</text>
+      <text class="status-text">今日已打卡</text>
+      <text class="status-time">打卡时间: {{todayStatus.checkinTime}}</text>
+    </view>
+    <view wx:else class="status-pending">
+      <text class="status-icon">⏰</text>
+      <text class="status-text">今日未打卡</text>
+      <text class="status-hint">请及时完成打卡</text>
+    </view>
+  </view>
+
+  <!-- 打卡按钮 -->
+  <view class="checkin-section">
+    <button 
+      class="checkin-btn {{todayStatus && todayStatus.hasCheckedIn ? 'disabled' : ''}}"
+      bindtap="doCheckin"
+      disabled="{{todayStatus && todayStatus.hasCheckedIn || isChecking}}"
+    >
+      <view wx:if="{{isChecking}}" class="loading">
+        <text class="loading-text">打卡中...</text>
+      </view>
+      <view wx:else>
+        <text class="checkin-icon">📍</text>
+        <text class="checkin-text">
+          {{todayStatus && todayStatus.hasCheckedIn ? '已完成打卡' : '立即打卡'}}
+        </text>
+      </view>
+    </button>
+  </view>
+
+  <!-- 打卡规则提示 -->
+  <view class="rules-section">
+    <view class="rule-item">
+      <text class="rule-icon">🕐</text>
+      <text class="rule-text">打卡时间: 08:00 - 08:30</text>
+    </view>
+    <view class="rule-item">
+      <text class="rule-icon">📍</text>
+      <text class="rule-text">需要开启位置权限</text>
+    </view>
+    <view class="rule-item">
+      <text class="rule-icon">📞</text>
+      <text class="rule-text">未打卡将自动语音提醒</text>
+    </view>
+  </view>
+</view>

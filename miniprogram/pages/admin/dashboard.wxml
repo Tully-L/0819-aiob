@@ -1,0 +1,53 @@
+<!--pages/admin/dashboard.wxml-->
+<view class="container">
+  <!-- 统计卡片 -->
+  <view class="stats-grid">
+    <view class="stat-card">
+      <text class="stat-number">{{todayStats.totalDrivers}}</text>
+      <text class="stat-label">总司机数</text>
+    </view>
+    <view class="stat-card success">
+      <text class="stat-number">{{todayStats.checkedIn}}</text>
+      <text class="stat-label">已打卡</text>
+    </view>
+    <view class="stat-card warning">
+      <text class="stat-number">{{todayStats.notCheckedIn}}</text>
+      <text class="stat-label">未打卡</text>
+    </view>
+    <view class="stat-card danger">
+      <text class="stat-number">{{todayStats.lateDrivers}}</text>
+      <text class="stat-label">迟到</text>
+    </view>
+  </view>
+
+  <!-- 未打卡司机列表 -->
+  <view class="section">
+    <view class="section-title">未打卡司机</view>
+    <view wx:if="{{uncheckedDrivers.length > 0}}">
+      <view wx:for="{{uncheckedDrivers}}" wx:key="_id" class="driver-item">
+        <text class="driver-name">{{item.name}}</text>
+        <text class="driver-id">{{item.employeeId}}</text>
+        <text class="driver-phone">{{item.phone}}</text>
+      </view>
+    </view>
+    <view wx:else class="empty">
+      <text>所有司机已完成打卡</text>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-grid">
+    <button class="menu-item" bindtap="goToDrivers">
+      <text class="menu-icon">👥</text>
+      <text class="menu-text">司机管理</text>
+    </button>
+    <button class="menu-item" bindtap="goToCalls">
+      <text class="menu-icon">📞</text>
+      <text class="menu-text">外呼记录</text>
+    </button>
+    <button class="menu-item" bindtap="goToSettings">
+      <text class="menu-icon">⚙️</text>
+      <text class="menu-text">系统设置</text>
+    </button>
+  </view>
+</view>

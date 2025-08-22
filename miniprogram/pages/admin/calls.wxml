@@ -1,0 +1,14 @@
+<!--pages/admin/calls.wxml-->
+<view class="container">
+  <view wx:for="{{callRecords}}" wx:key="_id" class="call-record">
+    <view class="call-info">
+      <text class="driver-name">{{item.driverName}}</text>
+      <text class="phone">{{item.phone}}</text>
+      <text class="call-time">{{item.callTime}}</text>
+    </view>
+    <view class="call-result">
+      <text class="status status-{{item.status}}">{{item.result}}</text>
+      <text class="duration">{{item.duration}}秒</text>
+    </view>
+  </view>
+</view>

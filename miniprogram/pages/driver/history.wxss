@@ -1,0 +1,52 @@
+/* pages/driver/history.wxss */
+.container {
+  padding: 40rpx;
+}
+
+.history-item {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.status {
+  font-size: 26rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+}
+
+.status-normal {
+  background: #d1f2eb;
+  color: #00b894;
+}
+
+.status-late {
+  background: #ffeaa7;
+  color: #fdcb6e;
+}
+
+.status-missed {
+  background: #fab1a0;
+  color: #e17055;
+}
+
+.empty {
+  text-align: center;
+  padding: 100rpx 0;
+  color: #999;
+}

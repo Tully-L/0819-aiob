@@ -1,0 +1,15 @@
+<!--pages/admin/drivers.wxml-->
+<view class="container">
+  <view wx:for="{{driverList}}" wx:key="_id" class="driver-card">
+    <view class="driver-info">
+      <text class="name">{{item.name}}</text>
+      <text class="employee-id">工号: {{item.employeeId}}</text>
+      <text class="phone">{{item.phone}}</text>
+    </view>
+    <view class="driver-status">
+      <text class="status status-{{item.status}}">
+        {{item.status === 'active' ? '正常' : '停用'}}
+      </text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/driver/history.wxml-->
+<view class="container">
+  <view wx:if="{{checkinList.length > 0}}">
+    <view wx:for="{{checkinList}}" wx:key="_id" class="history-item">
+      <view class="date">{{item.date}}</view>
+      <view class="time">{{item.checkinTime}}</view>
+      <view class="status status-{{item.status}}">
+        {{item.status === 'normal' ? '正常' : item.status === 'late' ? '迟到' : '缺勤'}}
+      </view>
+    </view>
+  </view>
+  <view wx:else class="empty">
+    <text>暂无打卡记录</text>
+  </view>
+</view>

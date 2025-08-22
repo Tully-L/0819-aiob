@@ -1,0 +1,87 @@
+/* pages/driver/profile.wxss */
+.container {
+  padding: 40rpx;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 24rpx;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+
+.avatar-section {
+  text-align: center;
+  padding: 60rpx 40rpx 40rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.name {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.employee-id {
+  display: block;
+  font-size: 28rpx;
+  opacity: 0.8;
+}
+
+.info-section {
+  padding: 40rpx;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.value {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.status-active {
+  color: #00b894;
+}
+
+.status-inactive {
+  color: #e17055;
+}
+
+.actions {
+  padding: 0 40rpx;
+}
+
+.action-btn {
+  width: 100%;
+  height: 88rpx;
+  background: #e17055;
+  color: white;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+}
